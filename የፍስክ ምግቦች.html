@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">                   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>የባህርዳር ዩኒቨርስቲ የተማሪዎች አገልግሎት       የምግብ ዋጋ ዝርዝር</title>
+    <style>
+        /* Embedded stylesheet */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:#8d6e63 ;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .menu-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #6d4c41;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color:black;
+            margin-top: 25px;
+            border-left: 4px solid #8d6e63;
+            padding-left: 10px;
+        }
+        
+        .menu-section {
+            margin-bottom: 30px;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dashed #eaeaea;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-name {
+            font-weight: 600;
+            flex-grow: 1;
+        }
+        
+        .item-price {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+        .item-desc {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            width: 100%;
+            margin-top: 5px;
+        }
+        
+        /* Custom checkbox styling */
+        .checkbox-container {
+            display: inline-block;
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .checkbox-container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .checkbox-container:hover input ~ .checkmark {
+            background-color: #ddd;
+        }
+        
+        .checkbox-container input:checked ~ .checkmark {
+            background-color: #2ecc71;
+        }
+        
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        
+        .checkbox-container input:checked ~ .checkmark:after {
+            display: block;
+        }
+        
+        .checkbox-container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 7px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+        
+        .order-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .order-btn:hover {
+            background: #2980b9;
+        }
+        .copyright-footer {
+            background-color:#000080;
+            color: #666;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+    </style>
+</head>
+<body> 
+    <div class="menu-container">
+        <h1>የምግብ ዝርዝር</h1>
+           
+        <div class="menu-section">
+            <h2>የፍስክ ምግቦች</h2>
+        
+        <div class="menu-section">
+            
+                <div class="menu-item">
+                <div>
+                    <div class="item-name">በበሬ ጥብስ </div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">120 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            
+             <div class="menu-item">
+                <div>
+                    <div class="item-name">የበግ ጥብስ</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">130 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            
+            
+          <div class="menu-item">
+                <div>
+                    <div class="item-name">እንቁላል ስልስ በ2 ዳቦ/በእንጀራ </div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">80 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>   
+             <div class="menu-item">
+                <div>
+                    <div class="item-name">እንቁላል ፍርፍር በ2 ዳቦ/እንጀራ </div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">60 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+       <div class="menu-item">
+                <div>
+                    <div class="item-name">እንቁላል ሳንዲዊች</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">50 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>      
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ድንች በስጋ</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">75 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>                             
+            
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ሙሉ ስጋ ፍርፍር</div>
+                    <div class="item-desc"></div>
+                </div>
+                <div class="item-price">110 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+             <div class="menu-item">
+                <div>
+                    <div class="item-name">ስጋ ፍርፍር</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">90 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+                 
+        
+         <div class="menu-item">
+                <div>
+                    <div class="item-name">ፓስታ በእንቁላል በ2 ዳቦ</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">85 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+       <div class="menu-item">
+                <div>
+                    <div class="item-name">ፓስታ በስጋ</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">90 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+             <div class="menu-item">
+                <div>
+                    <div class="item-name">እስፔሻል ስጋ ፍርፍር</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">100 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>  
+        <div class="menu-item">
+                <div>
+                    <div class="item-name">ቋንጣ ፍርፍር</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">100 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+             <div class="menu-item">
+                <div>
+                    <div class="item-name">እስፔሻል ቋንጣ ፍርፍር</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">110 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div> 
+        <div class="menu-item">
+                <div>
+                    <div class="item-name">ምንቸት</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">100 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+           <div class="menu-item">
+                <div>
+                    <div class="item-name">ቀይ ወጥ</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">100 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+              <div class="menu-item">
+                <div>
+                    <div class="item-name">ሚስቶ</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">90 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+              <div class="menu-item">
+                <div>
+                    <div class="item-name">ሩዝ በስጋ</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">80 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+                 <div class="menu-item">
+                <div>
+                    <div class="item-name">መኮረኒ በስጋ</div>
+                    <div class="item-desk"></div>
+                </div>
+                <div class="item-price">80 ብር</div>
+                <label class="checkbox-container">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+             <div style="display: flex; justify-content: space-between;">
+        <a href="የፆም ምግቦች.html" style="
+            text-decoration: none;
+            padding: 12px 25px;
+            background-color: #e0e0e0;
+            color: #333;
+            border-radius: 5px;
+            font-weight: bold;
+        ">ለመመለስ </a>
+
+        <a href="ትኩስ መጠጦች.html" style="
+            text-decoration: none;
+            padding: 12px 25px;
+            background-color: #2ecc71;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        ">ቀጣይ</a>
+    </div>
+</body>
+</html>
+
+       
